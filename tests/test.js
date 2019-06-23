@@ -9,7 +9,7 @@ const request = supertest(app);
 describe('Tests app', function () {
   it('verifies get', function (done) {
     request.get('/current-workload').expect(200).end(function (err, result) {
-      test.string(result.body.Output).contains('Hello');
+      test.string(result.body.Output).contains('Fault');
       test.value(result).
         hasHeader('content-type', 'application/json; charset=utf-8');
       done(err);
