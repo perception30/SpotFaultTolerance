@@ -1,6 +1,6 @@
 'use strict';
 
-import AwsServerless from './AwsServerless';
+const AwsServerless = require('./AwsServerless');
 
 const awsServerlessExpress = new AwsServerless();
 const server = awsServerlessExpress.server;
