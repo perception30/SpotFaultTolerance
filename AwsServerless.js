@@ -1,7 +1,7 @@
 const awsServerlessExpress = require('aws-serverless-express');
 const app = require('./app');
 
-export default class AwsServerless {
+class AwsServerless {
   constructor () {
     this.proxy = awsServerlessExpress.proxy;
     this.createdServer = awsServerlessExpress.createServer(app);
