@@ -1,18 +1,17 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
-app.get('/', function(req, res) {
+app.get('/current-workload', function (req, res) {
   res.send({
-    "Output": "Hello World!"
+    'Output': 'Fault Tolerant App!'
   });
 });
 
-app.post('/', function(req, res) {
+app.post('/', function (req, res) {
   res.send({
-    "Output": "Hello World!"
+    'Output': 'Hello World!'
   });
 });
-
 
 // Export your Express configuration so that it can be consumed by the Lambda handler
-module.exports = app
+module.exports = app;

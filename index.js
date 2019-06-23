@@ -1,7 +1,8 @@
 'use strict';
 
-const awsServerlessExpress = require('aws-serverless-express')
-const app = require('./app')
-const server = awsServerlessExpress.createServer(app)
+import AwsServerless from './AwsServerless';
 
-exports.handler = (event, context) => awsServerlessExpress.proxy(server, event, context);
+const awsServerlessExpress = new AwsServerless();
+
+exports.handler = (event, context) =>
+  awsServerlessExpress.getProxy(server, event, context);
