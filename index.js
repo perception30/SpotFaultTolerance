@@ -2,8 +2,7 @@
 
 const AwsServerless = require('./AwsServerless');
 
-const awsServerlessExpress = new AwsServerless();
-const server = awsServerlessExpress.server;
+const server = AwsServerless.server;
 
 exports.handler = (event, context) =>
-  awsServerlessExpress.getProxy(server, event, context);
+  AwsServerless.getProxy(server, event, context);
