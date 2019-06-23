@@ -10,7 +10,7 @@ const params = {
     { AttributeName: 'title', KeyType: 'RANGE' }  //Sort key
   ],
   AttributeDefinitions: [
-    { AttributeName: 'year', AttributeType: 'N' },
+    { AttributeName: 'workUnit', AttributeType: 'N' },
     { AttributeName: 'title', AttributeType: 'S' }
   ],
   ProvisionedThroughput: {
